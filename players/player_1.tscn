@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bvasbjmplaxex"]
+
+[ext_resource type="Script" uid="uid://bksx05fuex2qb" path="res://players/player_1.gd" id="1_uaswb"]
+[ext_resource type="Texture2D" uid="uid://bapwljjgoy0fo" path="res://assets/Sprite Pack 2/1 - Onion Lad/Idle (16 x 16).png" id="2_addu3"]
+[ext_resource type="Texture2D" uid="uid://dtwrpa5eo2qco" path="res://assets/Sprite Pack 2/1 - Onion Lad/Run_&_Jump (16 x 16).png" id="3_ef4xs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojmqp"]
+atlas = ExtResource("2_addu3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoeyg"]
+atlas = ExtResource("2_addu3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab28v"]
+atlas = ExtResource("3_ef4xs")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32fup"]
+atlas = ExtResource("3_ef4xs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o047m"]
+atlas = ExtResource("3_ef4xs")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd48l"]
+atlas = ExtResource("3_ef4xs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ykdfk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojmqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoeyg")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab28v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32fup")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o047m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sd48l")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mis1k"]
+radius = 6.0
+
+[node name="player1" type="CharacterBody2D" unique_id=1081278290]
+script = ExtResource("1_uaswb")
+
+[node name="anim" type="AnimatedSprite2D" parent="." unique_id=828242207]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ykdfk")
+animation = &"idle"
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=1468251449]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_mis1k")

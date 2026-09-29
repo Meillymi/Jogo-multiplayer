@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dbiwvcdhyeqaf"]
+
+[ext_resource type="Script" uid="uid://15b7vh3h0s5k" path="res://linha_de_chegada.gd" id="1_hlbtn"]
+[ext_resource type="Texture2D" uid="uid://kotbb7feeoa1" path="res://pixel-art-cartoon-pride-flag-icon-png.webp" id="2_6lx0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mis1k"]
+size = Vector2(26, 21)
+
+[node name="linha_de_chegada" type="Area2D" unique_id=1291713267]
+script = ExtResource("1_hlbtn")
+
+[node name="anim" type="Sprite2D" parent="." unique_id=1688411329]
+scale = Vector2(0.028571438, 0.037755173)
+texture = ExtResource("2_6lx0i")
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=725555961]
+shape = SubResource("RectangleShape2D_mis1k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

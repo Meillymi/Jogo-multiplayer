@@ -1,0 +1,68 @@
+[gd_scene format=4 uid="uid://d1w26aqoanr7i"]
+
+[ext_resource type="Texture2D" uid="uid://cysgrir7hv00l" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_e75qy"]
+[ext_resource type="PackedScene" uid="uid://bvasbjmplaxex" path="res://players/player_1.tscn" id="2_hc0nt"]
+[ext_resource type="PackedScene" uid="uid://dq4pnhm368mb4" path="res://players/player_2.tscn" id="3_khbn7"]
+[ext_resource type="PackedScene" uid="uid://dbiwvcdhyeqaf" path="res://linha_de_chegada.tscn" id="4_hc0nt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6dj2a"]
+texture = ExtResource("1_e75qy")
+3:1/0 = 0
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+11:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+11:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+15:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+11:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+11:5/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+4:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mis1k"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6dj2a")
+
+[node name="morro" type="Node2D" unique_id=660370172]
+position = Vector2(19, 574)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1288681490]
+position = Vector2(-16, 34)
+tile_map_data = PackedByteArray("AAAAAAIAAAAEAAEAAAABAAIAAAAEAAEAAAACAAIAAAAEAAEAAAACAAEAAAAEAAEAAAADAAEAAAAEAAEAAAAEAAEAAAAEAAEAAAAEAAAAAAAEAAEAAAAFAAAAAAAEAAEAAAAFAP//AAAEAAEAAAAGAP//AAAEAAEAAAAGAP7/AAAEAAEAAAAHAP7/AAAEAAEAAAAHAP3/AAAEAAEAAAAIAP3/AAAEAAEAAAAIAPz/AAAEAAEAAAAJAPz/AAAEAAEAAAAKAPz/AAAEAAEAAAAKAPv/AAAEAAEAAAALAPv/AAAEAAEAAAALAPr/AAAEAAEAAAAMAPr/AAAEAAEAAAAMAPn/AAAEAAEAAAANAPn/AAAEAAEAAAANAPj/AAAEAAEAAAAOAPj/AAAEAAEAAAAQAPb/AAAEAAEAAAARAPb/AAAEAAEAAAASAPb/AAAEAAEAAAASAPX/AAAEAAEAAAASAPT/AAAEAAEAAAATAPT/AAAEAAEAAAAWAPD/AAAEAAEAAAAZAO3/AAAEAAEAAAAcAOn/AAAEAAEAAAAbAOr/AAAEAAEAAAAeAOX/AAAEAAEAAAAfAOX/AAAEAAEAAAAgAOX/AAAEAAEAAAAhAOX/AAAEAAEAAAAjAOj/AAAEAAEAAAAkAOn/AAAEAAEAAAAlAOr/AAAEAAEAAAAmAOv/AAAEAAEAAAAnAOz/AAAEAAEAAAApAO//AAAEAAEAAAAqAO//AAAEAAEAAAArAO//AAAEAAEAAAAuAO3/AAAEAAEAAAAvAO3/AAAEAAEAAAAwAO3/AAAEAAEAAAAxAO3/AAAEAAEAAAAzAO//AAAEAAEAAAA0AO//AAAEAAEAAAA0APD/AAAEAAEAAAA1APD/AAAEAAEAAAA4AO7/AAAEAAEAAAA5AO3/AAAEAAEAAAA5AOz/AAAEAAEAAAA7AOv/AAAEAAEAAAA+AOj/AAAEAAEAAABBAOX/AAAEAAEAAABCAOP/AAAEAAEAAABDAOP/AAAEAAEAAABEAOP/AAAEAAEAAABFAOP/AAAEAAEAAAD//wIAAAAEAAEAAAD//wEAAAAEAAEAAAD//wAAAAAEAAEAAAD/////AAAEAAEAAAD///7/AAAEAAEAAAD///3/AAAEAAEAAAD///z/AAAEAAEAAAD///v/AAAEAAEAAAD///r/AAAEAAEAAAD///n/AAAEAAEAAAD///j/AAAEAAEAAAD///f/AAAEAAEAAAD///b/AAAEAAEAAAD///X/AAAEAAEAAAA=")
+tile_set = SubResource("TileSet_mis1k")
+
+[node name="player1" parent="." unique_id=1081278290 instance=ExtResource("2_hc0nt")]
+position = Vector2(17, 21)
+
+[node name="player2" parent="." unique_id=558227549 instance=ExtResource("3_khbn7")]
+position = Vector2(56, 4)
+
+[node name="linha_de_chegada" parent="." unique_id=1291713267 instance=ExtResource("4_hc0nt")]
+position = Vector2(1119, -475)
